@@ -265,9 +265,8 @@
 
           <ul class="sidebar-menu">
           <li class="menu-header">Dashboard</li>
-                <li style="margin-left: 40px;"><a class="nav-link" href="/home">Home</a></li>
-            
-         
+                <li style="margin-left: 40px;"><i class="fas fa-columns"></i><a class="nav-link" href="/home">Home</a></li>
+             
 
             <!-- Form Siswa -->
 
@@ -290,7 +289,7 @@
               <ul class="sidebar-menu">
                 <li class="menu-header">Input Tugas</li>
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link has-dropdown"><img class="" width="30" src="{{ asset('template/assets/img/products/product-3-50.png') }}"></i><span style="margin-left: 15px;">Data Tugas</span></a>
+                  <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span style="margin-left: 15px;">Data Tugas</span></a>
                   <ul class="dropdown-menu">
                     <li><a class="nav-link" href="/materi">Input Materi</a></li>
                   </ul>
@@ -373,10 +372,9 @@
       </div>
 
       <!-- Main Content -->
-      <div class="main-content">
+  
         @yield("content")
-      </div>
-
+ 
       <footer class="main-footer">
         <div class="footer-left">
           Copyright &copy; 2018 <div class="bullet">
