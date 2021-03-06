@@ -6,7 +6,7 @@
 <div class="col-lg-8">
     <div class="card"  style="background-color: white; margin-left: 65px; width: 800px">
         <div class="card-header">
-            <h4> Buat Tugas</h4>
+            <h4> Tampilan Tugas</h4>
         </div>
       
         <div class="card-body" style="background-color: white;">

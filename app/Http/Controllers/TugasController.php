@@ -8,6 +8,13 @@ use App\Tugas;
 
 class TugasController extends Controller
 {
+
+    public function home()
+    {
+    
+        return view('home');
+    }
+
     public function rombel($rombel)
     {
         $materi = Materi::where('kelas', $rombel)->get();

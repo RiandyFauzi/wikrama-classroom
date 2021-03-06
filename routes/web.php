@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/home', 'TugasController@home')->name('home');
 
 Route::prefix('/materi')->name('materi.')->group(function () {
     Route::get('/', 'MateriController@index')->name('index');

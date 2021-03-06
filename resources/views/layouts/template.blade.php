@@ -260,97 +260,105 @@
             <a href="index.html">WC</a>
           </div>
 
-    
-          <!-- Form Siswa -->
 
-          @if(auth()->user()->level == 'siswa')
+          <!-- homw -->
+
           <ul class="sidebar-menu">
-            <li class="menu-header">Siswa</li>
-            <li class="dropdown">
-               <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Kelas</span></a>
-              <ul class="dropdown-menu">            
-                <li><a class="nav-link" href="{{ route('tugas.dashboard',[auth()->user()->rombel]) }}">{{ auth()->user()->rombel }}</a></li>
-                <li><a class="nav-link" href="{{ route('tugas.dashboard',[auth()->user()->rayon]) }}">{{ auth()->user()->rayon }}</a></li>         
-              </ul>
-            </li>
-            @endif
+          <li class="menu-header">Dashboard</li>
+                <li style="margin-left: 40px;"><a class="nav-link" href="/home">Home</a></li>
+            
+         
 
-       
-            <!-- Input Tugas -->
+            <!-- Form Siswa -->
 
-            @if(auth()->user()->level == 'guru')
+            @if(auth()->user()->level == 'siswa')
             <ul class="sidebar-menu">
-              <li class="menu-header">Input Tugas</li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><img class="" width="30" src="{{ asset('template/assets/img/products/product-3-50.png') }}"></i><span style="margin-left: 15px;">Data Tugas</span></a>
+              <li class="menu-header">Siswa</li>
+              <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Kelas</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="/materi">Input Materi</a></li>
+                  <li><a class="nav-link" href="{{ route('tugas.dashboard',[auth()->user()->rombel]) }}">{{ auth()->user()->rombel }}</a></li>
+                  <li><a class="nav-link" href="{{ route('tugas.dashboard',[auth()->user()->rayon]) }}">{{ auth()->user()->rayon }}</a></li>
                 </ul>
               </li>
+              @endif
 
-              <!-- Kelas All -->
 
+              <!-- Input Tugas -->
 
+              @if(auth()->user()->level == 'guru')
               <ul class="sidebar-menu">
-                <li class="menu-header">Kelas All</li>
+                <li class="menu-header">Input Tugas</li>
                 <li class="nav-item dropdown">
-
-                <li class="dropdown">
-                  <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">RPL</span></a>
+                  <a href="#" class="nav-link has-dropdown"><img class="" width="30" src="{{ asset('template/assets/img/products/product-3-50.png') }}"></i><span style="margin-left: 15px;">Data Tugas</span></a>
                   <ul class="dropdown-menu">
-                   
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-1')}}">RPL X-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-2')}}">RPL X-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-3')}}">RPL X-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-4')}}">RPL X-4</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-1')}}">RPL XI-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-2')}}">RPL XI-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-3')}}">RPL XI-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-4')}}">RPL XI-4</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-1')}}">RPL XII-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-2')}}">RPL XII-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-3')}}">RPL XII-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-4')}}">RPL XII-4</a></li>
+                    <li><a class="nav-link" href="/materi">Input Materi</a></li>
                   </ul>
                 </li>
-                <li class="dropdown">
-                  <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/tkj2.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;"><span>TKJ</span></a>
-                  <ul class="dropdown-menu">                 
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-1')}}">TKJ X-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-2')}}">TKJ X-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-3')}}">TKJ X-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-4')}}">TKJ X-4</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-1')}}">TKJ XI-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-2')}}">TKJ XI-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-3')}}">TKJ XI-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-4')}}">TKJ XI-4</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-1')}}">TKJ XII-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-2')}}">TKJ XII-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-3')}}">TKJ XII-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-4')}}">TKJ XII-4</a></li>
-                   
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/bdp.png') }}" style="margin-left: 1px;"><span style="margin-left: 15px;"><span>BDP</span></a>
-                  <ul class="dropdown-menu">                 
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-1')}}">TKJ X-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-2')}}">TKJ X-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-3')}}">TKJ X-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-4')}}">TKJ X-4</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-1')}}">TKJ XI-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-2')}}">TKJ XI-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-3')}}">TKJ XI-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-4')}}">TKJ XI-4</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-1')}}">TKJ XII-1</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-2')}}">TKJ XII-2</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-3')}}">TKJ XII-3</a></li>
-                    <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-4')}}">TKJ XII-4</a></li>
-                   
-                  </ul>
-                </li>
-                </li>
-                @endif
+
+                <!-- Kelas All -->
+
+
+                <ul class="sidebar-menu">
+                  <li class="menu-header">Kelas All</li>
+                  <li class="nav-item dropdown">
+
+                  <li class="dropdown">
+                    <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">RPL</span></a>
+                    <ul class="dropdown-menu">
+
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-1')}}">RPL X-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-2')}}">RPL X-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-3')}}">RPL X-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL X-4')}}">RPL X-4</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-1')}}">RPL XI-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-2')}}">RPL XI-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-3')}}">RPL XI-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XI-4')}}">RPL XI-4</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-1')}}">RPL XII-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-2')}}">RPL XII-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-3')}}">RPL XII-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','RPL XII-4')}}">RPL XII-4</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/tkj2.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;"><span>TKJ</span></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-1')}}">TKJ X-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-2')}}">TKJ X-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-3')}}">TKJ X-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-4')}}">TKJ X-4</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-1')}}">TKJ XI-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-2')}}">TKJ XI-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-3')}}">TKJ XI-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-4')}}">TKJ XI-4</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-1')}}">TKJ XII-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-2')}}">TKJ XII-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-3')}}">TKJ XII-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-4')}}">TKJ XII-4</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/bdp.png') }}" style="margin-left: 1px;"><span style="margin-left: 15px;"><span>BDP</span></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-1')}}">BDP X-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-2')}}">BDP X-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-3')}}">BDP X-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ X-4')}}">BDP X-4</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-1')}}">BDP XI-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-2')}}">BDP XI-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-3')}}">BDP XI-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XI-4')}}">BDP XI-4</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-1')}}">BDP XII-1</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-2')}}">BDP XII-2</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-3')}}">BDP XII-3</a></li>
+                      <li><a class="nav-link" href="{{ route('tugas.rombel','TKJ XII-4')}}">BDP XII-4</a></li>
+
+                    </ul>
+                  </li>
+                  </li>
+                  @endif
 
 
 
@@ -371,11 +379,10 @@
 
       <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
-        </div>
-        <div class="footer-right">
-          2.3.0
-        </div>
+          Copyright &copy; 2018 <div class="bullet">
+            <div class="footer-right">
+
+            </div>
       </footer>
     </div>
   </div>
