@@ -22,7 +22,7 @@
 
 						<div class="row" style="margin-left: -150px;">
 							<div class="col-md-8 offset-sm-2">
-								<form action="{{url('materi_update', $materi->id)}}" method="POST">
+								<form action="{{url('materi.update', $materi->id)}}" method="POST">
 									{{csrf_field()}}
 
 									<div class="form-group">

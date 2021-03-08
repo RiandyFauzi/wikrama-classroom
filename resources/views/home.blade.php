@@ -9,11 +9,13 @@
     </div>
 
   <div class="section-body">
-    <h2 class="section-title">This is Example Page</h2>
-    <p class="section-lead">This page is just an example for you to create your own page.</p>
-    <div class="card">
+  
+  <img src="img/bg1.jpg" alt="" width="500px" style="margin-left: 20px;">   
+ 
+
+  <div class="card" style="margin-top: 30px;">
       <div class="card-header">
-        <h4>Example Card</h4>
+        <h4>Wikrama Classroom</h4>
       </div>
       <div class="card-body">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

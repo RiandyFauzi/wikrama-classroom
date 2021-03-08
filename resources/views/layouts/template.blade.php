@@ -225,16 +225,7 @@
               <div class="d-sm-none d-lg-inline-block">{{Auth::user()->name}}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-title">Logged in 5 min ago</div>
-              <a href="features-profile.html" class="dropdown-item has-icon">
-                <i class="far fa-user"></i> Profile
-              </a>
-              <a href="features-activities.html" class="dropdown-item has-icon">
-                <i class="fas fa-bolt"></i> Activities
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
-                <i class="fas fa-cog"></i> Settings
-              </a>
+             
 
               <a class="dropdown-item has-icon text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -254,18 +245,23 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html"><img class="" width="220" src="{{ asset('img/wc2.png') }}"></i></a>
+            <a href="/home"><img class="" width="220" src="{{ asset('img/wc2.png') }}"></i></a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">WC</a>
+            <a href="/home">WC</a>
           </div>
 
 
           <!-- homw -->
 
           <ul class="sidebar-menu">
-          <li class="menu-header">Dashboard</li>
-                <li style="margin-left: 40px;"><i class="fas fa-columns"></i><a class="nav-link" href="/home">Home</a></li>
+              <li class="menu-header">Dashboard</li>
+              <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Dashboard</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="/home">Home</a></li>
+                    </ul>
+              </li>
              
 
             <!-- Form Siswa -->
@@ -287,12 +283,21 @@
 
               @if(auth()->user()->level == 'guru')
               <ul class="sidebar-menu">
-                <li class="menu-header">Input Tugas</li>
+                <li class="menu-header">Input</li>
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span style="margin-left: 15px;">Data Tugas</span></a>
+                  <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Data Tugas</span></a>
                   <ul class="dropdown-menu">
                     <li><a class="nav-link" href="/materi">Input Materi</a></li>
+                   
                   </ul>
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Data Siswa</span></a>
+                  <ul class="dropdown-menu">
+                     <li><a class="nav-link" href="/regis">Register Siswa</a></li>
+                  </ul>
+                  
                 </li>
 
                 <!-- Kelas All -->
@@ -377,7 +382,7 @@
  
       <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2018 <div class="bullet">
+          Copyright &copy; 2020 <div class="bullet">
             <div class="footer-right">
 
             </div>

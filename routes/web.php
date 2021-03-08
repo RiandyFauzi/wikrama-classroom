@@ -29,6 +29,15 @@ Route::prefix('/materi')->name('materi.')->group(function () {
     Route::get('/delete/{id}', 'MateriController@destroy')->name('delete');
 });
 
+
+Route::prefix('/regis')->name('register.')->group(function () {
+    Route::get('/', 'RegisController@index')->name('index');
+    Route::post('/create', 'RegisController@create')->name('create');
+    Route::get('/edit/{id}', 'RegisController@edit')->name('edit');
+    Route::post('/update/{id}', 'RegisController@update')->name('update');
+    Route::get('/delete/{id}', 'RegisController@destroy')->name('delete');
+});
+
 Route::prefix('/tugas')->name('tugas.')->group(function(){
     Route::get('/dashboard/rombel/{rombel}','TugasController@dashboard')->name('dashboard');
     Route::get('/dashboard/rayon/{rayon}','TugasController@dashboard')->name('dashboard2');
@@ -39,6 +48,5 @@ Route::prefix('/tugas')->name('tugas.')->group(function(){
     Route::get('/delete/{id}', 'TugasController@destroy')->name('delete');
     Route::get('//{id}', 'TugasController@show')->name('materi_show');
     Route::get('/rombel/{rombel}','TugasController@rombel')->name('rombel');
-
 });
 
