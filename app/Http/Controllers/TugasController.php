@@ -9,6 +9,15 @@ use App\Tugas;
 class TugasController extends Controller
 {
 
+
+    public function tugas($id)
+    {
+        
+        $tugas = Tugas::find($id);
+       return view('siswa.tugas.index', compact('tugas'));
+    }
+
+
     public function home()
     {
     
@@ -50,9 +59,58 @@ class TugasController extends Controller
           ]);
       
     }
+
+    
+
+    public function create(Request $request)
+    {
+        $request->validate([
+
+            'nis' => 'required',
+            'name' => 'required',
+            'rombel' => 'required',
+            'rayon' => 'required',
+            'file_siswa' => 'required',
+            'keterangan'=> 'required',
+            
+                
+        ]);
+
+        
+                   
+            $file = $request->file_siswa;
+            $namafile = $file->getClientOriginalName();
+            $file->move(public_path()."/siswa", $namafile);
+             Tugas::create([
+              
+            'nis' => $request->nis,
+            'name' => $request->name,            
+            'rombel' => $request->rombel,
+            'rayon' => $request->rayon,
+            'file_siswa' => $request->file_siswa,
+            'keterangan' => $request->keterangan,
+            
+        ]);
+      
+
+
+      
+        return redirect("/tugas/1");
+    }
     public function show($id)
     {
+        return view('siswa.tugas.index',[
+            'materi' =>  Materi::find($id),
+            'tugas' => Tugas::find($id),
+        
+  
+          ]);
+      
+    }
+
+    public function show2($id)
+    {
         $materi = Materi::find($id);
-       return view('siswa.tugas.index', compact('materi'));
+       return view('siswa.tugas.laporan', compact('materi'));
     }
 }

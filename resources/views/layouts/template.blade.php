@@ -225,7 +225,7 @@
               <div class="d-sm-none d-lg-inline-block">{{Auth::user()->name}}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-             
+
 
               <a class="dropdown-item has-icon text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -255,14 +255,14 @@
           <!-- homw -->
 
           <ul class="sidebar-menu">
-              <li class="menu-header">Dashboard</li>
-              <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Dashboard</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="/home">Home</a></li>
-                    </ul>
-              </li>
-             
+            <li class="menu-header">Dashboard</li>
+            <li class="dropdown">
+              <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Dashboard</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="/home">Home</a></li>
+              </ul>
+            </li>
+
 
             <!-- Form Siswa -->
 
@@ -288,23 +288,23 @@
                   <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Data Tugas</span></a>
                   <ul class="dropdown-menu">
                     <li><a class="nav-link" href="/materi">Input Materi</a></li>
-                   
+
                   </ul>
-                  
+
                 </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Data Siswa</span></a>
                   <ul class="dropdown-menu">
-                     <li><a class="nav-link" href="/regis">Register Siswa</a></li>
+                    <li><a class="nav-link" href="/regis">Register Siswa</a></li>
                   </ul>
-                  
+
                 </li>
 
                 <!-- Kelas All -->
 
 
                 <ul class="sidebar-menu">
-                  <li class="menu-header">Kelas All</li>
+                  <li class="menu-header">Rombel All</li>
                   <li class="nav-item dropdown">
 
                   <li class="dropdown">
@@ -362,7 +362,103 @@
                     </ul>
                   </li>
                   </li>
-                  @endif
+
+
+
+                  <ul class="sidebar-menu">
+                    <li class="menu-header">Rayon All</li>
+                    <li class="nav-item dropdown">
+
+                    <li class="dropdown">
+                      <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">Cicurg</span></a>
+                      <ul class="dropdown-menu">
+
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cicurug 1')}}">Cicurug 1</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cicurug 2')}}">Cicurug 2</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cicurug 3')}}">Cicurug 3</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cicurug 4')}}">Cicurug 4</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cicurug 5')}}">Cicurug 5</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cicurug 6')}}">Cicurug 6</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cicurug 7')}}">Cicurug 7</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">Ciawi</span></a>
+                      <ul class="dropdown-menu">
+
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Ciawi 1')}}">Ciawi 1</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Ciawi 2')}}">Ciawi 2</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Ciawi 3')}}">Ciawi 3</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Ciawi 4')}}">Ciawi 4</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Ciawi 5')}}">Ciawi 5</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Ciawi 6')}}">Ciawi 6</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Ciawi 7')}}">Ciawi 7</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">Cisarua</span></a>
+                      <ul class="dropdown-menu">
+
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cisarua 1')}}">Cisarua 1</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cisarua 2')}}">Cisarua 2</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cisarua 3')}}">Cisarua 3</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cisarua 4')}}">Cisarua 4</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cisarua 5')}}">Cisarua 5</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cisarua 6')}}">Cisarua 6</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Cisarua 7')}}">Cisarua 7</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">Tajur</span></a>
+                      <ul class="dropdown-menu">
+
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Tajur 1')}}">Tajur 1</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Tajur 2')}}">Tajur 2</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Tajur 3')}}">Tajur 3</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Tajur 4')}}">Tajur 4</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Tajur 5')}}">Tajur 5</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Tajur 6')}}">Tajur 6</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Tajur 7')}}">Tajur 7</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">Sukasari</span></a>
+                      <ul class="dropdown-menu">
+
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Sukasari 1')}}">Sukasari 1</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Sukasari 2')}}">Sukasari 2</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Sukasari 3')}}">Sukasari 3</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Sukasari 4')}}">Sukasari 4</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Sukasari 5')}}">Sukasari 5</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Sukasari 6')}}">Sukasari 6</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Sukasari 7')}}">Sukasari 7</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="nav-link has-dropdown"><img class="" width="27" src="{{ asset('img/rpl1.jpg') }}" style="margin-left: 1px;"><span style="margin-left: 15px;">Wikrama</span></a>
+                      <ul class="dropdown-menu">
+
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Wikrama 1')}}">Wikrama 1</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Wikrama 2')}}">Wikrama 2</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Wikrama 3')}}">Wikrama 3</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Wikrama 4')}}">Wikrama 4</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Wikrama 5')}}">Wikrama 5</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Wikrama 6')}}">Wikrama 6</a></li>
+                        <li><a class="nav-link" href="{{ route('tugas.rombel','Wikrama 7')}}">Wikrama 7</a></li>
+                      </ul>
+                    </li>
+
+
+
+
+                    </li>
+
+
+
+
+
+
+                    @endif
 
 
 
@@ -377,9 +473,9 @@
       </div>
 
       <!-- Main Content -->
-  
-        @yield("content")
- 
+
+      @yield("content")
+
       <footer class="main-footer">
         <div class="footer-left">
           Copyright &copy; 2020 <div class="bullet">

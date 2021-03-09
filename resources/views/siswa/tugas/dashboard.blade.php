@@ -28,7 +28,7 @@
                         <a href="/tugas/{{ $materi->id }}" class="stretched-link"></a>
                     </div>
                     <div class="card-body" style="margin-top: -45px;">
-                        This is some text within a card body.
+                    {{ $materi->tgl_upload }} - {{ $materi->tgl_deadline}}
                     </div>
                     </div>
                 </div>

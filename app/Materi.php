@@ -8,6 +8,6 @@ class Materi extends Model
 {
     protected $table = 'materis';
     protected $fillable = [
-        'id', 'kelas', 'name', 'judul', 'deskripsi', 'file'
+        'id', 'kelas', 'name', 'mapel', 'judul', 'tgl_upload', 'tgl_deadline', 'deskripsi', 'file'
     ];
 }

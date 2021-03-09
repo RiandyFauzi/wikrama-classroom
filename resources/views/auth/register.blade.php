@@ -74,11 +74,7 @@
                                     </select>
                                 </div>
 
-                                <div class="form-group mb-4">
-                                    <label for="nis">Nis</label>
-                                    <input id="nis" type="text" class="form-control" name="nis" value="" placeholder="Masukan Nis Anda">
-                                </div>
-                                
+                              
                                 <div class="form-group mb-4">
                                     <label for="mapel">Mapel</label>
                                     <input id="mapel" type="text" class="form-control" name="mapel"  value="" placeholder="Masukan Mapel Anda">
@@ -86,28 +82,6 @@
 
                               
 
-                                <div class="form-group">
-                                    <label for="rombel">Rombel</label>
-                                    <select name="rombel" class="form-control">
-                                        <option value=""></option>
-                                        <option value="RPL XII-1">RPL XII-1</option>
-                                        <option value="RPL XII-2">RPL XII-2</option>
-                                        <option value="RPL XII-1">RPL XII-3</option>
-                                        <option value="RPL XII-2">RPL XII-4</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="rayon">Rayon</label>
-                                    <select name="rayon" class="form-control">
-                                        <option value=""></option>
-                                        <option value="Cicurug 2">Cicurug 1</option>
-                                        <option value="Cicurug 2">Cicurug 2</option>
-                                        <option value="Cicurug 2">Cicurug 3</option>
-                                        <option value="Cicurug 3">Cicurug 4</option>
-
-                                    </select>
-                                </div>
 
                                 <div>
 

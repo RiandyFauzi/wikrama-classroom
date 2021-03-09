@@ -12,16 +12,16 @@
 
     @include('sweetalert::alert')
     @if (session('status'))
-          <div class="alert alert-success">
-            {{ session('status') }}
-          </div>
-          @endif
+    <div class="alert alert-success">
+      {{ session('status') }}
+    </div>
+    @endif
 
-          @if (session('delete'))
-          <div class="alert alert-danger">
-            {{ session('delete') }}
-          </div>
-          @endif
+    @if (session('delete'))
+    <div class="alert alert-danger">
+      {{ session('delete') }}
+    </div>
+    @endif
 
     <div class="row">
       <div class="col-lg-12">
@@ -52,6 +52,8 @@
                     <option value="RPL XII-2">RPL XII-2</option>
                     <option value="RPL XII-3">RPL XII-3</option>
                     <option value="RPL XII-4">RPL XII-4</option>
+                    <option value="RPL XII-4">Cicurug 3</option>
+                    <option value="RPL XII-4">Cicurug 2</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -59,18 +61,31 @@
                   <input name="name" type="text" class="form-control" id="name" value="{{Auth::user()->name}}">
                 </div>
                 <div class="form-group">
+                  <label for="exampleInputPassword1">mapel</label>
+                  <input name="mapel" type="text" class="form-control" id="name" value="{{Auth::user()->mapel}}">
+                </div>
+                <div class="form-group">
                   <label for="exampleInputPassword1">judul</label>
                   <input name="judul" type="text" class="form-control" id="judul">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">deskripsi</label>
-                  <input name="deskripsi" type="textarea" class="form-control" id="deskripsi">
+                  <label for="exampleInputPassword1">Tanggal Upload</label>
+                  <input name="tgl_upload" type="date" class="form-control" id="name" value="{{Auth::user()->name}}">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">gambar_berita</label>
+                  <label for="exampleInputPassword1">Tanggal Deadline</label>
+                  <input name="tgl_deadline" type="date" class="form-control" id="name" value="{{Auth::user()->name}}">
+                </div>
+                <div textarea class="form-group">
+                  <label for="exampleInputPassword1">deskripsi</label>
+                  <textarea name="deskripsi" cols="150" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">file</label>
                   <input name="file" type="file" class="form-control" id="exampleInputPassword1">
                 </div>
 
+           
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -85,7 +100,7 @@
                 <div class="card">
 
 
-                  <div class="section-title">Responsive</div>
+                  <div class="section-title">Table Tugas</div>
                   <div class="table-responsive">
                     <table class="table table-sm">
                       <thead>
@@ -93,7 +108,10 @@
                           <th scope="col">id</th>
                           <th scope="col">kelas</th>
                           <th scope="col">name</th>
+                          <th scope="col">mapel</th>
                           <th scope="col">judul</th>
+                          <th scope="col">tgl_upload</th>
+                          <th scope="col">tgl_deadline</th>
                           <th scope="col">deskripsi</th>
                           <th scope="col">file</th>
                         </tr>
@@ -104,7 +122,10 @@
                           <td>{{$materi->id}}</td>
                           <td>{{$materi->kelas}}</td>
                           <td>{{$materi->name}}</td>
+                          <td>{{$materi->mapel}}</td>
                           <td>{{$materi->judul}}</td>
+                          <td>{{$materi->tgl_upload}}</td>
+                          <td>{{$materi->tgl_deadline}}</td>
                           <td>{!! Str::limit($materi->deskripsi, 20) !!}</td>
                           <td>{{$materi->file}}</td>
                           <td>

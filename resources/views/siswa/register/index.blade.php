@@ -77,14 +77,14 @@
                                     <label for="exampleInputPassword1">rombel</label>
                                     <select name="kelas" class="form-control">
                                         <option disabled selected>Masukan Rombel Siswa</option>
-                                        <option value="RPL XII-1">RPL X-1</option>
-                                        <option value="RPL XII-2">RPL X-2</option>
-                                        <option value="RPL XII-3">RPL X-3</option>
-                                        <option value="RPL XII-4">RPL X-4</option>
-                                        <option value="RPL XII-1">RPL XI-1</option>
-                                        <option value="RPL XII-2">RPL XI-2</option>
-                                        <option value="RPL XII-3">RPL XI-3</option>
-                                        <option value="RPL XII-4">RPL XI-4</option>
+                                        <option value="RPL X-1">RPL X-1</option>
+                                        <option value="RPL X-2">RPL X-2</option>
+                                        <option value="RPL X-3">RPL X-3</option>
+                                        <option value="RPL X-4">RPL X-4</option>
+                                        <option value="RPL XI-1">RPL XI-1</option>
+                                        <option value="RPL XI-2">RPL XI-2</option>
+                                        <option value="RPL XI-3">RPL XI-3</option>
+                                        <option value="RPL XI-4">RPL XI-4</option>
                                         <option value="RPL XII-1">RPL XII-1</option>
                                         <option value="RPL XII-2">RPL XII-2</option>
                                         <option value="RPL XII-3">RPL XII-3</option>

@@ -17,8 +17,11 @@ class CreateMaterisTable extends Migration
             $table->id();
             $table->string('kelas');
             $table->string('name');
+            $table->string('mapel');
             $table->string('judul');
             $table->string('deskripsi');
+            $table->string('tgl_upload');
+            $table->string('tgl_deadline');
             $table->string('file');
             $table->timestamps();
         });

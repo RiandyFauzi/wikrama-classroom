@@ -15,11 +15,12 @@ class CreateTugasTable extends Migration
     {
         Schema::create('tugas', function (Blueprint $table) {
             $table->id();
-            $table->integer('nis');
-            $table->string('name');
-            $table->string('rombel');
-            $table->string('rayon');
-            $table->string('file_tugas');
+            $table->integer('nis')->nullable();
+            $table->string('name')->nullable();
+            $table->string('rombel')->nullable();
+            $table->string('rayon')->nullable();
+            $table->string('file_siswa')->nullable();
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }

@@ -27,6 +27,7 @@ Route::prefix('/materi')->name('materi.')->group(function () {
     Route::get('/edit/{id}', 'MateriController@edit')->name('edit');
     Route::post('/update/{id}', 'MateriController@update')->name('update');
     Route::get('/delete/{id}', 'MateriController@destroy')->name('delete');
+    Route::get('/cetak_pdf', 'MateriController@cetak_pdf');
 });
 
 
@@ -40,13 +41,17 @@ Route::prefix('/regis')->name('register.')->group(function () {
 
 Route::prefix('/tugas')->name('tugas.')->group(function(){
     Route::get('/dashboard/rombel/{rombel}','TugasController@dashboard')->name('dashboard');
-    Route::get('/dashboard/rayon/{rayon}','TugasController@dashboard')->name('dashboard2');
+    Route::get('/dashboard/rayon/{rayon}','TugasController@dashboard2')->name('dashboard2');
+
+    Route::get('/laporan/{id}', 'TugasController@show2')->name('show2');
+    Route::get('/rombel/{rombel}','TugasController@rombel')->name('rombel');
+
     Route::get('/', 'TugasController@index')->name('index');
     Route::post('/create', 'TugasController@create')->name('create');
     Route::get('/edit/{id}', 'TugasController@edit')->name('edit');
     Route::post('/update/{id}', 'TugasController@update')->name('update');
     Route::get('/delete/{id}', 'TugasController@destroy')->name('delete');
-    Route::get('//{id}', 'TugasController@show')->name('materi_show');
-    Route::get('/rombel/{rombel}','TugasController@rombel')->name('rombel');
+    Route::get('//{id}', 'TugasController@show')->name('show');
+  
 });
 
