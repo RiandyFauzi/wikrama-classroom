@@ -95,7 +95,7 @@ class TugasController extends Controller
 
 
       
-        return redirect("/tugas/1");
+        return back();
     }
     public function show($id)
     {
