@@ -113,4 +113,11 @@ class TugasController extends Controller
         $materi = Materi::find($id);
        return view('siswa.tugas.laporan', compact('materi'));
     }
+
+    public function destroy($id)
+    {
+        $tugas = \App\Tugas::find($id);
+        $tugas->delete($tugas);
+        return redirect('/tugas')->with('delete', 'Materi Dihapus!');
+    }
 }

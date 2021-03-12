@@ -255,15 +255,11 @@
           <!-- homw -->
 
           <ul class="sidebar-menu">
-            <li class="menu-header">Dashboard</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Dashboard</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="/home">Home</a></li>
-              </ul>
-            </li>
-
-
+          
+             <li class="menu-header">Starter</li>
+       
+            <li><a class="nav-link" href="/home"><i class="far fa-square"></i> <span>Home</span></a></li>
+        
             <!-- Form Siswa -->
 
             @if(auth()->user()->level == 'siswa')

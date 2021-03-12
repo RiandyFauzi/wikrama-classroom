@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">rombel</label>
-                                    <select name="kelas" class="form-control">
+                                    <select name="rombel" class="form-control">
                                         <option disabled selected>Masukan Rombel Siswa</option>
                                         <option value="RPL X-1">RPL X-1</option>
                                         <option value="RPL X-2">RPL X-2</option>
@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">rayon</label>
-                                    <select name="kelas" class="form-control">
+                                    <select name="rayon" class="form-control">
                                         <option disabled selected>Masukan Rombel Siswa</option>
                                         <option value="Cicurug 1">Cicurug 1</option>
                                         <option value="Cicurug 2">Cicurug 2</option>

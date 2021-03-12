@@ -71,6 +71,7 @@ class RegisController extends Controller
     {
         $register = User::find($id);
         $register->delete($register);
+        
         Alert::success('Succes','Data Dihapus');
         return redirect('/register');
     }
